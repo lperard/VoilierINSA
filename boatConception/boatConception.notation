@@ -208,6 +208,10 @@
       <layoutConstraint xsi:type="notation:Bounds" xmi:id="_smj7d-_jEemF6OdyRI7phw"/>
     </children>
     <children xsi:type="notation:BasicCompartment" xmi:id="_smj7eO_jEemF6OdyRI7phw" type="Class_OperationCompartment">
+      <children xsi:type="notation:Shape" xmi:id="_PbaaoPAJEem2WsvGsxXJnA" type="Operation_ClassOperationLabel">
+        <element href="boatConception.uml#_Pa9usPAJEem2WsvGsxXJnA"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_PbaaofAJEem2WsvGsxXJnA"/>
+      </children>
       <styles xsi:type="notation:TitleStyle" xmi:id="_smj7ee_jEemF6OdyRI7phw"/>
       <styles xsi:type="notation:SortingStyle" xmi:id="_smj7eu_jEemF6OdyRI7phw"/>
       <styles xsi:type="notation:FilteringStyle" xmi:id="_smj7e-_jEemF6OdyRI7phw"/>
@@ -220,7 +224,7 @@
       <layoutConstraint xsi:type="notation:Bounds" xmi:id="_smj7ge_jEemF6OdyRI7phw"/>
     </children>
     <element href="boatConception.uml#_smiGQO_jEemF6OdyRI7phw"/>
-    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_smjUYe_jEemF6OdyRI7phw" x="1260" y="220"/>
+    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_smjUYe_jEemF6OdyRI7phw" x="1160" y="200"/>
   </children>
   <children xsi:type="notation:Shape" xmi:id="_twyS4O_jEemF6OdyRI7phw" type="Class_Shape">
     <children xsi:type="notation:DecorationNode" xmi:id="_twyS4u_jEemF6OdyRI7phw" type="Class_NameLabel"/>
@@ -246,7 +250,7 @@
       <layoutConstraint xsi:type="notation:Bounds" xmi:id="_twyS8-_jEemF6OdyRI7phw"/>
     </children>
     <element href="boatConception.uml#_twxEwO_jEemF6OdyRI7phw"/>
-    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_twyS4e_jEemF6OdyRI7phw" x="1260" y="40"/>
+    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_twyS4e_jEemF6OdyRI7phw" x="1220" y="60"/>
   </children>
   <styles xsi:type="notation:StringValueStyle" xmi:id="_BhnV4e_gEemF6OdyRI7phw" name="diagram_compatibility_version" stringValue="1.4.0"/>
   <styles xsi:type="notation:DiagramStyle" xmi:id="_BhnV4u_gEemF6OdyRI7phw"/>

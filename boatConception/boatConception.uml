@@ -106,6 +106,7 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_smiGQO_jEemF6OdyRI7phw" name="serviceRF">
     <ownedAttribute xmi:type="uml:Property" xmi:id="_0x_r0O_jEemF6OdyRI7phw" name="deplacementPlateau"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_Pa9usPAJEem2WsvGsxXJnA" name="getDeplacement"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_twxEwO_jEemF6OdyRI7phw" name="TIM4"/>
 </uml:Model>

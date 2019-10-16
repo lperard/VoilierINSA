@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_BfSaoO_gEemF6OdyRI7phw" name="boatConception">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_BkiuEO_gEemF6OdyRI7phw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_C20OQO_gEemF6OdyRI7phw" name="main"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_I5PqwO_gEemF6OdyRI7phw" name="serviceAccel">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_cu2GwO_hEemF6OdyRI7phw" name="angleRoulis" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_i65ZUO_hEemF6OdyRI7phw" name="getRoulis">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_om8WIO_hEemF6OdyRI7phw" name="angleRoulis" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_phujYO_hEemF6OdyRI7phw" name="calculRoulis">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_5AiawO_hEemF6OdyRI7phw" name="axeX">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_7S0mcO_hEemF6OdyRI7phw" name="axeY">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_-Vcp8O_hEemF6OdyRI7phw" name="angleRoulis" direction="out">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_NTHOAO_gEemF6OdyRI7phw" name="ADC"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SNfdUO_gEemF6OdyRI7phw" memberEnd="_SNmLAO_gEemF6OdyRI7phw _SNsRoO_gEemF6OdyRI7phw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SNjHsO_gEemF6OdyRI7phw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SNjuwO_gEemF6OdyRI7phw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SNmLAO_gEemF6OdyRI7phw" name="serviceaccel" type="_I5PqwO_gEemF6OdyRI7phw" association="_SNfdUO_gEemF6OdyRI7phw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SNsRoO_gEemF6OdyRI7phw" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_SNfdUO_gEemF6OdyRI7phw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_TY3EQO_gEemF6OdyRI7phw" memberEnd="_TY4SYu_gEemF6OdyRI7phw _TY45cO_gEemF6OdyRI7phw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TY4SYO_gEemF6OdyRI7phw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TY4SYe_gEemF6OdyRI7phw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TY4SYu_gEemF6OdyRI7phw" name="adc" type="_NTHOAO_gEemF6OdyRI7phw" association="_TY3EQO_gEemF6OdyRI7phw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_TY45cO_gEemF6OdyRI7phw" name="serviceaccel" type="_I5PqwO_gEemF6OdyRI7phw" association="_TY3EQO_gEemF6OdyRI7phw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_EUrogO_iEemF6OdyRI7phw" name="serviceBatterie">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_LgV98O_iEemF6OdyRI7phw" name="tension" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_QqnqcO_iEemF6OdyRI7phw" name="getTension">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_XL2i0O_iEemF6OdyRI7phw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_a51QcO_iEemF6OdyRI7phw" name="calculTension">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_dw4WEO_iEemF6OdyRI7phw" name="dataRegister"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_gLKnMO_iEemF6OdyRI7phw" name="tension" direction="out">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_JfmOMO_iEemF6OdyRI7phw" memberEnd="_JfncUO_iEemF6OdyRI7phw _JfrtwO_iEemF6OdyRI7phw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jfm1QO_iEemF6OdyRI7phw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Jfm1Qe_iEemF6OdyRI7phw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JfncUO_iEemF6OdyRI7phw" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_JfmOMO_iEemF6OdyRI7phw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_JfrtwO_iEemF6OdyRI7phw" name="servicebatterie" type="_EUrogO_iEemF6OdyRI7phw" association="_JfmOMO_iEemF6OdyRI7phw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_KCYyMO_iEemF6OdyRI7phw" memberEnd="_KCaAUe_iEemF6OdyRI7phw _KCanYO_iEemF6OdyRI7phw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_KCZZQO_iEemF6OdyRI7phw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_KCaAUO_iEemF6OdyRI7phw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KCaAUe_iEemF6OdyRI7phw" name="servicebatterie" type="_EUrogO_iEemF6OdyRI7phw" association="_KCYyMO_iEemF6OdyRI7phw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_KCanYO_iEemF6OdyRI7phw" name="adc" type="_NTHOAO_gEemF6OdyRI7phw" association="_KCYyMO_iEemF6OdyRI7phw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jIf7AO_iEemF6OdyRI7phw" name="serviceCodeur">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BDJw4O_jEemF6OdyRI7phw" name="angleGirouette" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="__yI08O_iEemF6OdyRI7phw" name="getAngle">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ki1-cO_jEemF6OdyRI7phw" name="angle" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_LvcUcO_jEemF6OdyRI7phw" name="calculAngle">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_U1jkYO_jEemF6OdyRI7phw" name="deplacement"/>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_W2Gf0O_jEemF6OdyRI7phw" name="index">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZzXiMO_jEemF6OdyRI7phw" name="angle" direction="out">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nai_AO_iEemF6OdyRI7phw" name="TIMER3"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3-st0O_iEemF6OdyRI7phw" memberEnd="_3-tU4u_iEemF6OdyRI7phw _3-ujAO_iEemF6OdyRI7phw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3-tU4O_iEemF6OdyRI7phw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3-tU4e_iEemF6OdyRI7phw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3-tU4u_iEemF6OdyRI7phw" name="servicecodeur" type="_jIf7AO_iEemF6OdyRI7phw" association="_3-st0O_iEemF6OdyRI7phw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3-ujAO_iEemF6OdyRI7phw" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_3-st0O_iEemF6OdyRI7phw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_4ffGsO_iEemF6OdyRI7phw" memberEnd="_4fftwu_iEemF6OdyRI7phw _4fgU0O_iEemF6OdyRI7phw">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_4fftwO_iEemF6OdyRI7phw" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_4fftwe_iEemF6OdyRI7phw" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4fftwu_iEemF6OdyRI7phw" name="timer3" type="_nai_AO_iEemF6OdyRI7phw" association="_4ffGsO_iEemF6OdyRI7phw"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_4fgU0O_iEemF6OdyRI7phw" name="servicecodeur" type="_jIf7AO_iEemF6OdyRI7phw" association="_4ffGsO_iEemF6OdyRI7phw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_smiGQO_jEemF6OdyRI7phw" name="serviceRF">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0x_r0O_jEemF6OdyRI7phw" name="deplacementPlateau"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_twxEwO_jEemF6OdyRI7phw" name="TIM4"/>
+</uml:Model>

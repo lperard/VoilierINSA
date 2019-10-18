@@ -390,6 +390,13 @@
         </Group>
         <Group>
           <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\adc.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
@@ -418,6 +425,11 @@
               <FileName>stm32f1xx_ll_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LLDrivers\src\stm32f1xx_ll_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_ll_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LLDrivers\src\stm32f1xx_ll_adc.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -840,6 +852,13 @@
         </Group>
         <Group>
           <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\adc.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
@@ -868,6 +887,11 @@
               <FileName>stm32f1xx_ll_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\LLDrivers\src\stm32f1xx_ll_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_ll_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\LLDrivers\src\stm32f1xx_ll_adc.c</FilePath>
             </File>
           </Files>
         </Group>

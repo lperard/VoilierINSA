@@ -2,7 +2,12 @@
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
 
+#include "../LLDrivers/inc/stm32f1xx_ll_adc.h"
+#include "../LLDrivers/inc/stm32f1xx_ll_gpio.h"
+
 void  SystemClock_Config(void);
+
+
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -14,7 +19,37 @@ void  SystemClock_Config(void);
 	
 
 int main(void)
-{	
+{
+	RCC ->APB2ENR //ENABLE ADC CLOCK
+	
+	
+	LL_ADC_InitTypeDef adcTypeDef;
+	adcTypeDef.DataAlignment = LL_ADC_DATA_ALIGN_RIGHT;
+	adcTypeDef.SequencersScanMode = LL_ADC_SEQ_SCAN_ENABLE;
+	LL_ADC_Init(ADC1, &adcTypeDef);
+	
+	
+	LL_ADC_REG_InitTypeDef adcTypeDefReg;
+	adcTypeDefReg.TriggerSource = LL_ADC_REG_TRIG_SOFTWARE;
+	adcTypeDefReg.SequencerLength = ;//ON SAIT PAS
+	adcTypeDefReg.DMATransfer = LL_ADC_REG_DMA_TRANSFER_NONE;
+	adcTypeDefReg.ContinuousMode = •LL_ADC_REG_CONV_SINGLE ;
+	
+	
+	
+	//Configuration des pins
+	RCC -> APB2ENR |= RCC_APB2ENR_IOPCEN;
+	
+	//PIN PC2 pour la batterie
+	LL_GPIO_InitTypeDef initPC2;
+	LL_GPIO_StructInit(&initPC2);
+	initPC2.Pin = LL_GPIO_PIN_2;
+	initPC2.Mode = LL_GPIO_MODE_ALTERNATE;
+	initPC2.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	LL_GPIO_Init(GPIOC, &initPC2);
+	
+	LL_ADC_Enable(ADC1);
+	
 	
   /* Infinite loop */
   while (1)

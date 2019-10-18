@@ -16,6 +16,9 @@ void  SystemClock_Config(void);
 int main(void)
 {	
 	
+	//config the system clock
+	SystemClock_Config();
+	
   /* Infinite loop */
   while (1)
   {

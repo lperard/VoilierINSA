@@ -390,6 +390,13 @@
         </Group>
         <Group>
           <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>receiverRF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\receiverRF.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
@@ -840,6 +847,13 @@
         </Group>
         <Group>
           <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>receiverRF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\receiverRF.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>

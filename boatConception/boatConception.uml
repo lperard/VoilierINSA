@@ -105,8 +105,82 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_4fgU0O_iEemF6OdyRI7phw" name="servicecodeur" type="_jIf7AO_iEemF6OdyRI7phw" association="_4ffGsO_iEemF6OdyRI7phw"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_smiGQO_jEemF6OdyRI7phw" name="serviceRF">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_0x_r0O_jEemF6OdyRI7phw" name="deplacementPlateau"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_0x_r0O_jEemF6OdyRI7phw" name="deplacementPlateau" visibility="private"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_Pa9usPAJEem2WsvGsxXJnA" name="getDeplacement"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_twxEwO_jEemF6OdyRI7phw" name="TIM4"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_veo0gPGTEemIH4WlhBFHMg" memberEnd="_vfFgcvGTEemIH4WlhBFHMg _vfOqYPGTEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vfFgcPGTEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vfFgcfGTEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vfFgcvGTEemIH4WlhBFHMg" name="tim4" type="_twxEwO_jEemF6OdyRI7phw" association="_veo0gPGTEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_vfOqYPGTEemIH4WlhBFHMg" name="servicerf" type="_smiGQO_jEemF6OdyRI7phw" association="_veo0gPGTEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_xJDH4PGTEemIH4WlhBFHMg" memberEnd="_xJDH4_GTEemIH4WlhBFHMg _xJDH5PGTEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_xJDH4fGTEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_xJDH4vGTEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xJDH4_GTEemIH4WlhBFHMg" name="servicerf" type="_smiGQO_jEemF6OdyRI7phw" association="_xJDH4PGTEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_xJDH5PGTEemIH4WlhBFHMg" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_xJDH4PGTEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8Y8HwPGTEemIH4WlhBFHMg" name="serviceServoMoteur">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_TpMswPGVEemIH4WlhBFHMg" name="setAngle">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_YNk24PGVEemIH4WlhBFHMg" name="angle">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Rbf7kPGUEemIH4WlhBFHMg" name="TIMER1"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Vq7JYPGUEemIH4WlhBFHMg" memberEnd="_Vq7JY_GUEemIH4WlhBFHMg _VrETUPGUEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Vq7JYfGUEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Vq7JYvGUEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Vq7JY_GUEemIH4WlhBFHMg" name="serviceservomoteur" type="_8Y8HwPGTEemIH4WlhBFHMg" association="_Vq7JYPGUEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_VrETUPGUEemIH4WlhBFHMg" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_Vq7JYPGUEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_W8thYPGUEemIH4WlhBFHMg" memberEnd="_W8thY_GUEemIH4WlhBFHMg _W8thZPGUEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_W8thYfGUEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_W8thYvGUEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_W8thY_GUEemIH4WlhBFHMg" name="timer1" type="_Rbf7kPGUEemIH4WlhBFHMg" association="_W8thYPGUEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_W8thZPGUEemIH4WlhBFHMg" name="serviceservomoteur" type="_8Y8HwPGTEemIH4WlhBFHMg" association="_W8thYPGUEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZQDdAPGUEemIH4WlhBFHMg" name="serviceModuleRF"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bZTBcPGUEemIH4WlhBFHMg" name="UART"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ehjy4PGUEemIH4WlhBFHMg" memberEnd="_ehtj4vGUEemIH4WlhBFHMg _ehtj4_GUEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ehtj4PGUEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ehtj4fGUEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ehtj4vGUEemIH4WlhBFHMg" name="modulerf" type="_ZQDdAPGUEemIH4WlhBFHMg" association="_ehjy4PGUEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ehtj4_GUEemIH4WlhBFHMg" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_ehjy4PGUEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fGXJEPGUEemIH4WlhBFHMg" memberEnd="_fGXJE_GUEemIH4WlhBFHMg _fGXJFPGUEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fGXJEfGUEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fGXJEvGUEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fGXJE_GUEemIH4WlhBFHMg" name="uart" type="_bZTBcPGUEemIH4WlhBFHMg" association="_fGXJEPGUEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fGXJFPGUEemIH4WlhBFHMg" name="modulerf" type="_ZQDdAPGUEemIH4WlhBFHMg" association="_fGXJEPGUEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_hCnaYPGUEemIH4WlhBFHMg" name="serviceMoteurCC">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_nXrpkPGVEemIH4WlhBFHMg" name="setAngle">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_snvN8PGVEemIH4WlhBFHMg" name="angle">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nO0d8PGUEemIH4WlhBFHMg" name="TIMER2"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_phuUsPGUEemIH4WlhBFHMg" memberEnd="_phuUs_GUEemIH4WlhBFHMg _phuUtPGUEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_phuUsfGUEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_phuUsvGUEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_phuUs_GUEemIH4WlhBFHMg" name="servicemoteurcc" type="_hCnaYPGUEemIH4WlhBFHMg" association="_phuUsPGUEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_phuUtPGUEemIH4WlhBFHMg" name="main" type="_C20OQO_gEemF6OdyRI7phw" association="_phuUsPGUEemIH4WlhBFHMg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_qAab0PGUEemIH4WlhBFHMg" memberEnd="_qAab0_GUEemIH4WlhBFHMg _qAab1PGUEemIH4WlhBFHMg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qAab0fGUEemIH4WlhBFHMg" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qAab0vGUEemIH4WlhBFHMg" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qAab0_GUEemIH4WlhBFHMg" name="timer2" type="_nO0d8PGUEemIH4WlhBFHMg" association="_qAab0PGUEemIH4WlhBFHMg"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_qAab1PGUEemIH4WlhBFHMg" name="servicemoteurcc" type="_hCnaYPGUEemIH4WlhBFHMg" association="_qAab0PGUEemIH4WlhBFHMg"/>
+  </packagedElement>
 </uml:Model>

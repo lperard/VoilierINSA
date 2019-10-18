@@ -459,6 +459,16 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>PeriphServices</GroupName>
+          <Files>
+            <File>
+              <FileName>GPIOConf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PeriphServices\GPIOConf.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
@@ -912,6 +922,16 @@
               <FileName>startup_stm32f103xb.s</FileName>
               <FileType>2</FileType>
               <FilePath>startup_stm32f103xb.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PeriphServices</GroupName>
+          <Files>
+            <File>
+              <FileName>GPIOConf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PeriphServices\GPIOConf.c</FilePath>
             </File>
           </Files>
         </Group>

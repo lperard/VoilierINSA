@@ -17,25 +17,22 @@ void  SystemClock_Config(void);
   * @retval None
   */
 	
-
+static int a;
 int main(void)
-{
-	RCC ->APB2ENR //ENABLE ADC CLOCK
-	
+ {
+	RCC ->APB2ENR |= RCC_APB2ENR_ADC1EN;
 	
 	LL_ADC_InitTypeDef adcTypeDef;
 	adcTypeDef.DataAlignment = LL_ADC_DATA_ALIGN_RIGHT;
 	adcTypeDef.SequencersScanMode = LL_ADC_SEQ_SCAN_ENABLE;
 	LL_ADC_Init(ADC1, &adcTypeDef);
 	
-	
 	LL_ADC_REG_InitTypeDef adcTypeDefReg;
 	adcTypeDefReg.TriggerSource = LL_ADC_REG_TRIG_SOFTWARE;
-	adcTypeDefReg.SequencerLength = ;//ON SAIT PAS
+	adcTypeDefReg.SequencerLength = LL_ADC_REG_SEQ_SCAN_DISABLE; //SEQ LENGTH
 	adcTypeDefReg.DMATransfer = LL_ADC_REG_DMA_TRANSFER_NONE;
-	adcTypeDefReg.ContinuousMode = •LL_ADC_REG_CONV_SINGLE ;
-	
-	
+	adcTypeDefReg.ContinuousMode = LL_ADC_REG_CONV_SINGLE;
+	LL_ADC_REG_Init(ADC1, &adcTypeDefReg);
 	
 	//Configuration des pins
 	RCC -> APB2ENR |= RCC_APB2ENR_IOPCEN;
@@ -50,10 +47,10 @@ int main(void)
 	
 	LL_ADC_Enable(ADC1);
 	
-	
   /* Infinite loop */
   while (1)
   {
+		a = ADC1 -> DR;
   }
 }
 

@@ -17,8 +17,9 @@ void init (void) {
 	
 	/*set at 20ms*/
 	TIM1InitStruct.Autoreload = 999; 
-	TIM1InitStruct.Prescaler= 359;
+	TIM1InitStruct.Prescaler= 1439;
 	/*************/
+	//init the other files
 	TIM1InitStruct.ClockDivision=LL_TIM_CLOCKDIVISION_DIV1;
 	TIM1InitStruct.CounterMode=LL_TIM_COUNTERMODE_UP;
 	TIM1InitStruct.RepetitionCounter=0;
@@ -29,11 +30,12 @@ void init (void) {
 	//struct use to config the output mode of the PWM on TIM1
 	LL_TIM_OC_InitTypeDef * PWMInitStruct;
 	
+	//set the values of the fields of the PWM structure
+	PWMInitStruct -> OCMode = LL_TIM_OCMODE_PWM1;
+	PWMInitStruct -> CompareValue = 0; //1ms for the minimum angle and 2ms for the max angle
+	
 	//init the PWM struct
 	LL_TIM_OC_StructInit(PWMInitStruct);
-	
-	//change the values of the fields of the PWM structure
-	PWMInitStruct -> OCMode = LL_TIM_OCMODE_PWM1;
 
 	//bind the PWM struct with the timer and the channel
 	LL_TIM_OC_Init(TIM1, LL_TIM_CHANNEL_CH1, PWMInitStruct);

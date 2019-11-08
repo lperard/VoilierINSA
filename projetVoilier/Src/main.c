@@ -1,6 +1,8 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
+#include "servoMoteur.h"
+#include "GPIOConf.h"
 
 void  SystemClock_Config(void);
 
@@ -18,6 +20,15 @@ int main(void)
 	
 	//config the system clock
 	SystemClock_Config();
+	
+	GPIOConfig();
+	
+	//init servoMoteur service
+	initServoMoteur();
+	
+	//start servo moteur service
+	enableServoMoteur();
+	
 	
   /* Infinite loop */
   while (1)

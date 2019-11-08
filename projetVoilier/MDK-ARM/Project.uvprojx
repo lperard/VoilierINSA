@@ -392,9 +392,9 @@
           <GroupName>MyDrivers</GroupName>
           <Files>
             <File>
-              <FileName>receiverRF.c</FileName>
+              <FileName>servoMoteur.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MyDrivers\receiverRF.c</FilePath>
+              <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -804,7 +804,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER,HSE_VALUE=8000000U,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers</IncludePath>
+              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers;..\PeriphServices</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -859,9 +859,9 @@
           <GroupName>MyDrivers</GroupName>
           <Files>
             <File>
-              <FileName>receiverRF.c</FileName>
+              <FileName>servoMoteur.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\MyDrivers\receiverRF.c</FilePath>
+              <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
             </File>
           </Files>
         </Group>

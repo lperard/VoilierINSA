@@ -2,6 +2,9 @@
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
 
+#include "stm32f1xx_ll_tim.h"
+#include "stm32f1xx_ll_gpio.h"
+
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -15,6 +18,45 @@ void  SystemClock_Config(void);
 
 int main(void)
 {	
+	
+	//TODO
+	//activer CEN de TIM3
+	//config les pins en input
+	//mettre arr a 1080
+	//mettre en place l'index (GPIO classique)
+	//SET UP du voilier : faire un tour de girouette au tout debut pour trouver le trou du capteur de l'index
+	
+	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN; //active le gpio
+	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN; //active le timer
+	
+	//Pin C 6 pour channel A
+	LL_GPIO_InitTypeDef initGPIO6;
+	LL_GPIO_StructInit(&initGPIO6);
+	initGPIO6.Pin = LL_GPIO_PIN_6;
+	initGPIO6.Mode = LL_GPIO_MODE_ALTERNATE;
+	LL_GPIO_Init(GPIOC, &initGPIO6);
+	
+	//Pin C 7 pour channel B
+	LL_GPIO_InitTypeDef initGPIO7;
+	LL_GPIO_StructInit(&initGPIO7);
+	initGPIO7.Pin = LL_GPIO_PIN_7;
+	initGPIO7.Mode = LL_GPIO_MODE_ALTERNATE;
+	LL_GPIO_Init(GPIOC, &initGPIO7);	
+	
+	//Initialisation du mode encoder pour les channels A et B
+	LL_TIM_ENCODER_InitTypeDef encInit;
+	encInit.EncoderMode = LL_TIM_ENCODERMODE_X4_TI12;
+	encInit.IC1ActiveInput = LL_TIM_ACTIVEINPUT_DIRECTTI;
+	encInit.IC1Filter = LL_TIM_IC_FILTER_FDIV1;
+	encInit.IC1Prescaler = LL_TIM_ICPSC_DIV1;
+	encInit.IC1Polarity = LL_TIM_IC_POLARITY_RISING;
+	
+	encInit.IC2ActiveInput = LL_TIM_ACTIVEINPUT_DIRECTTI;
+	encInit.IC2Filter = LL_TIM_IC_FILTER_FDIV1;
+	encInit.IC2Prescaler = LL_TIM_ICPSC_DIV1;
+	encInit.IC2Polarity = LL_TIM_IC_POLARITY_RISING;
+	
+	LL_TIM_ENCODER_Init(TIM3, &encInit);	
 	
   /* Infinite loop */
   while (1)

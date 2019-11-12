@@ -20,28 +20,25 @@ int main(void)
 {	
 	
 	//TODO
-	//activer CEN de TIM3
-	//config les pins en input
-	//mettre arr a 1080
+	//activer CEN de TIM3 DONE
+	//config les pins en input DONE
+	//mettre arr a 1080 DONE
 	//mettre en place l'index (GPIO classique)
 	//SET UP du voilier : faire un tour de girouette au tout debut pour trouver le trou du capteur de l'index
 	
 	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN; //active le gpio
-	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN; //active le timer
+	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN; //active la clock du timer
 	
-	//Pin C 6 pour channel A
-	LL_GPIO_InitTypeDef initGPIO6;
-	LL_GPIO_StructInit(&initGPIO6);
-	initGPIO6.Pin = LL_GPIO_PIN_6;
-	initGPIO6.Mode = LL_GPIO_MODE_ALTERNATE;
-	LL_GPIO_Init(GPIOC, &initGPIO6);
+	//Initialisation du timer
+	LL_TIM_InitTypeDef TIM3Struct;
+	TIM3Struct.Autoreload = 1080; //correponda un tour complet
+	TIM3Struct.Prescaler = 1;
+	TIM3Struct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
+	TIM3Struct.CounterMode = LL_TIM_COUNTERMODE_UP;
+	TIM3Struct.RepetitionCounter = 0;	
+	LL_TIM_Init(TIM3,&TIM3Struct);
 	
-	//Pin C 7 pour channel B
-	LL_GPIO_InitTypeDef initGPIO7;
-	LL_GPIO_StructInit(&initGPIO7);
-	initGPIO7.Pin = LL_GPIO_PIN_7;
-	initGPIO7.Mode = LL_GPIO_MODE_ALTERNATE;
-	LL_GPIO_Init(GPIOC, &initGPIO7);	
+	LL_TIM_EnableCounter(TIM3); //active le timer
 	
 	//Initialisation du mode encoder pour les channels A et B
 	LL_TIM_ENCODER_InitTypeDef encInit;
@@ -56,14 +53,16 @@ int main(void)
 	encInit.IC2Prescaler = LL_TIM_ICPSC_DIV1;
 	encInit.IC2Polarity = LL_TIM_IC_POLARITY_RISING;
 	
-	LL_TIM_ENCODER_Init(TIM3, &encInit);	
+	LL_TIM_ENCODER_Init(TIM3, &encInit);
 	
   /* Infinite loop */
-  while (1)
-  {
-  }
+  while (1) {
+		int indexPass = LL_GPIO_IsInputPinSet (GPIOC, LL_GPIO_PIN_8);
+		if(!indexPass) {
+			LL_TIM_SetCounter(TIM3, 0);
+		}
+	}
 }
-
 /**
   * @brief  System Clock Configuration
   *         The system Clock is configured as follow :

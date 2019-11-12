@@ -14,4 +14,6 @@ void enableServoMoteur(void);
 
 void disableServoMoteur(void);
 
+void setSailAngle (int angle) ;
+
 #endif

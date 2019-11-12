@@ -29,11 +29,12 @@ int main(void)
 	
 	//start servo moteur service
 	enableServoMoteur();
-	
+	//max = 100 deg
 	
   /* Infinite loop */
   while (1)
   {
+		setSailAngle(30);
   }
 }
 

@@ -38,8 +38,8 @@ void initServoMoteur (void) {
 	// ((__VALUE__) == LL_TIM_OCMODE_PWM1) 
 	PWMInitStruct.OCMode = LL_TIM_OCMODE_PWM1;
 	//1ms (value : 50) for the minimum angle and 2ms (value : 100) for the max angle
-	//set at 1.5 ms by default (straight position)
-	PWMInitStruct.CompareValue = 50;
+	//set at 2 ms by default (sail in straight position)
+	PWMInitStruct.CompareValue = 100;
 	//enable the compare mode
 	PWMInitStruct.OCState = LL_TIM_OCSTATE_ENABLE;
 	PWMInitStruct.OCNState = LL_TIM_OCSTATE_ENABLE;
@@ -72,3 +72,40 @@ void disableServoMoteur(void)
 {
 		LL_TIM_DisableCounter(TIM1);
 }
+
+/*
+@brief : set the angle of the sail (0 to 60 degrees)
+@param : angle wanted
+@return : none
+*/
+
+void setSailAngle (int angle) { 
+	float coefDirect = (-5./6.);
+	float	origin = 100.;
+	float compareValue = coefDirect * (float) angle + origin;
+	LL_TIM_OC_SetCompareCH1(TIM1,(int) compareValue);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

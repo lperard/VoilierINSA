@@ -39,7 +39,7 @@ void initServoMoteur (void) {
 	PWMInitStruct.OCMode = LL_TIM_OCMODE_PWM1;
 	//1ms (value : 50) for the minimum angle and 2ms (value : 100) for the max angle
 	//set at 1.5 ms by default (straight position)
-	PWMInitStruct.CompareValue = 75;
+	PWMInitStruct.CompareValue = 50;
 	//enable the compare mode
 	PWMInitStruct.OCState = LL_TIM_OCSTATE_ENABLE;
 	PWMInitStruct.OCNState = LL_TIM_OCSTATE_ENABLE;

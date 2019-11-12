@@ -337,7 +337,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER,HSE_VALUE=8000000U,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers</IncludePath>
+              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers;..\PeriphServices</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,6 +390,13 @@
         </Group>
         <Group>
           <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>servoMoteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
@@ -448,6 +455,16 @@
               <FileName>startup_stm32f103xb.s</FileName>
               <FileType>2</FileType>
               <FilePath>startup_stm32f103xb.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PeriphServices</GroupName>
+          <Files>
+            <File>
+              <FileName>GPIOConf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PeriphServices\GPIOConf.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -787,7 +804,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER,HSE_VALUE=8000000U,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers</IncludePath>
+              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers;..\PeriphServices</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -840,6 +857,13 @@
         </Group>
         <Group>
           <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>servoMoteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
@@ -898,6 +922,16 @@
               <FileName>startup_stm32f103xb.s</FileName>
               <FileType>2</FileType>
               <FilePath>startup_stm32f103xb.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>PeriphServices</GroupName>
+          <Files>
+            <File>
+              <FileName>GPIOConf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\PeriphServices\GPIOConf.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -15,30 +15,26 @@ void  SystemClock_Config(void);
   * @retval None
   */
 	
-
 int main(void)
 {	
+	static int RESETVALUE = 0x011B; // 0x02D0 - 0x01B5
 	
-	//TODO
-	//activer CEN de TIM3 DONE
-	//config les pins en input DONE
-	//mettre arr a 1080 DONE
-	//mettre en place l'index (GPIO classique)
-	//SET UP du voilier : faire un tour de girouette au tout debut pour trouver le trou du capteur de l'index
+	//active les gpio
+	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
+	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
 	
-	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN; //active le gpio
-	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN; //active la clock du timer
+	//active la clock du timer
+	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
 	
 	//Initialisation du timer
 	LL_TIM_InitTypeDef TIM3Struct;
-	TIM3Struct.Autoreload = 1080; //correponda un tour complet
+	TIM3Struct.Autoreload = 0x02D0; //correspond un tour complet (teste de maniere tres precise experimentalement)
+	//0 degre du bateau = 0x01B5
 	TIM3Struct.Prescaler = 1;
 	TIM3Struct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
 	TIM3Struct.CounterMode = LL_TIM_COUNTERMODE_UP;
 	TIM3Struct.RepetitionCounter = 0;	
 	LL_TIM_Init(TIM3,&TIM3Struct);
-	
-	LL_TIM_EnableCounter(TIM3); //active le timer
 	
 	//Initialisation du mode encoder pour les channels A et B
 	LL_TIM_ENCODER_InitTypeDef encInit;
@@ -54,15 +50,22 @@ int main(void)
 	encInit.IC2Polarity = LL_TIM_IC_POLARITY_RISING;
 	
 	LL_TIM_ENCODER_Init(TIM3, &encInit);
+	LL_TIM_EnableCounter(TIM3); //active le timer
+		
+	// bloquant, necessite un tour de girouette
+	while(!LL_GPIO_IsInputPinSet (GPIOA, LL_GPIO_PIN_5)) {
+		LL_TIM_SetCounter(TIM3, RESETVALUE);
+	}
 	
   /* Infinite loop */
   while (1) {
-		int indexPass = LL_GPIO_IsInputPinSet (GPIOC, LL_GPIO_PIN_8);
-		if(!indexPass) {
-			LL_TIM_SetCounter(TIM3, 0);
-		}
 	}
 }
+
+int getAngleGirouette() {
+	return LL_TIM_GetCounter(TIM3) / 2; //0,5 degre par position, conversion CNT -> deg;
+}
+
 /**
   * @brief  System Clock Configuration
   *         The system Clock is configured as follow :

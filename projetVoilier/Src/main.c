@@ -4,7 +4,8 @@
 
 #include "stm32f1xx_ll_tim.h"
 #include "stm32f1xx_ll_gpio.h"
-
+#include "codeurIncr.h"
+//#include "GPIOConf.h"
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -22,6 +23,12 @@ int main(void)
 	//active les gpio
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
+	
+	
+	//GPIOConfig();
+	initTimerCodeur();
+	enableTimer3();
+	
 	
 	/*
 	//active la clock du timer
@@ -63,6 +70,7 @@ int main(void)
 	
   /* Infinite loop */
   while (1) {
+		
 	}
 }
 

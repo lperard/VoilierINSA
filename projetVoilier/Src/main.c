@@ -23,9 +23,11 @@ int main(void)
 	RCC->APB2ENR |= RCC_APB2ENR_IOPAEN;
 	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
 	
+	/*
 	//active la clock du timer
 	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
-	
+	*/
+	/*
 	//Initialisation du timer
 	LL_TIM_InitTypeDef TIM3Struct;
 	TIM3Struct.Autoreload = 0x02D0; //correspond un tour complet (teste de maniere tres precise experimentalement)
@@ -34,8 +36,9 @@ int main(void)
 	TIM3Struct.ClockDivision = LL_TIM_CLOCKDIVISION_DIV1;
 	TIM3Struct.CounterMode = LL_TIM_COUNTERMODE_UP;
 	TIM3Struct.RepetitionCounter = 0;	
-	LL_TIM_Init(TIM3,&TIM3Struct);
+	LL_TIM_Init(TIM3,&TIM3Struct);*/
 	
+	/*
 	//Initialisation du mode encoder pour les channels A et B
 	LL_TIM_ENCODER_InitTypeDef encInit;
 	encInit.EncoderMode = LL_TIM_ENCODERMODE_X4_TI12;
@@ -49,9 +52,10 @@ int main(void)
 	encInit.IC2Prescaler = LL_TIM_ICPSC_DIV1;
 	encInit.IC2Polarity = LL_TIM_IC_POLARITY_RISING;
 	
-	LL_TIM_ENCODER_Init(TIM3, &encInit);
+	LL_TIM_ENCODER_Init(TIM3, &encInit);*/
+	/*
 	LL_TIM_EnableCounter(TIM3); //active le timer
-		
+	*/	
 	// bloquant, necessite un tour de girouette
 	while(!LL_GPIO_IsInputPinSet (GPIOA, LL_GPIO_PIN_5)) {
 		LL_TIM_SetCounter(TIM3, RESETVALUE);
@@ -62,9 +66,7 @@ int main(void)
 	}
 }
 
-int getAngleGirouette() {
-	return LL_TIM_GetCounter(TIM3) / 2; //0,5 degre par position, conversion CNT -> deg;
-}
+
 
 /**
   * @brief  System Clock Configuration

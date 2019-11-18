@@ -1,4 +1,4 @@
-//driver for the rf receiver//
+//driver for the servo moteur//
 
 #ifndef SERVO_MOTEUR_H
 #define SERVO_MOTEUR_H

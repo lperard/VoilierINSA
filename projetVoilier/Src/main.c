@@ -1,13 +1,12 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
-#include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
-#include "servoMoteur.h"
-#include "GPIOConf.h"
-
+#include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Confi
 #include "stm32f1xx_ll_tim.h"
 #include "stm32f1xx_ll_gpio.h"
 #include "codeurIncr.h"
 #include "GPIOConf.h"
+#include "servoMoteur.h"
+#include "moteurCC.h"
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -28,9 +27,9 @@ int main(void)
 	GPIOConfig();	
 	
 	/* codeur incremental */
-	initTimerCodeur();
+	/*initTimerCodeur();
 	enableTimer3();
-	setupCodeur(); // attend un tour de girouette	
+	setupCodeur(); // attend un tour de girouette	*/
 	
 	/* servo moteur */
 	//init servoMoteur service
@@ -40,10 +39,17 @@ int main(void)
 	enableServoMoteur();
 	//max = 100 deg
 	
+	/* moteur cc */
+	//init moteur cc service
+	initMoteurCC();
+	
+	//start moteur CC service
+	enableMoteurCC();
+	
   /* Infinite loop */
   while (1)
   {
-		setSailAngle(30);
+		navigate(25,1);
   }
 }
 

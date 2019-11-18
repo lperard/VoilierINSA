@@ -9,6 +9,7 @@
 "nucleo-f103rb\startup_stm32f103xb.o"
 "nucleo-f103rb\codeurincr.o"
 "nucleo-f103rb\servomoteur.o"
+"nucleo-f103rb\readrf.o"
 "nucleo-f103rb\gpioconf.o"
 --library_type=microlib --strict --scatter "NUCLEO-F103RB\NUCLEO-F103RB.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

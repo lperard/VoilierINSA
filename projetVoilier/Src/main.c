@@ -1,13 +1,14 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
-#include "servoMoteur.h"
-#include "GPIOConf.h"
-
 #include "stm32f1xx_ll_tim.h"
 #include "stm32f1xx_ll_gpio.h"
-#include "codeurIncr.h"
+
+#include "servoMoteur.h"
 #include "GPIOConf.h"
+#include "codeurIncr.h"
+#include "readRF.h"
+
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -39,6 +40,8 @@ int main(void)
 	//start servo moteur service
 	enableServoMoteur();
 	//max = 100 deg
+	
+	initReadRF();
 	
   /* Infinite loop */
   while (1)

@@ -1,9 +1,5 @@
 --cpu Cortex-M3
 "nucleo-f103rb\main.o"
-<<<<<<< HEAD
-=======
-"nucleo-f103rb\servomoteur.o"
->>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
 "nucleo-f103rb\stm32f1xx_ll_rcc.o"
 "nucleo-f103rb\stm32f1xx_ll_utils.o"
 "nucleo-f103rb\stm32f1xx_ll_tim.o"
@@ -11,10 +7,8 @@
 "nucleo-f103rb\stm32f1xx_ll_usart.o"
 "nucleo-f103rb\system_stm32f1xx.o"
 "nucleo-f103rb\startup_stm32f103xb.o"
-<<<<<<< HEAD
 "nucleo-f103rb\codeurincr.o"
-=======
->>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
+"nucleo-f103rb\servomoteur.o"
 "nucleo-f103rb\gpioconf.o"
 --library_type=microlib --strict --scatter "NUCLEO-F103RB\NUCLEO-F103RB.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols

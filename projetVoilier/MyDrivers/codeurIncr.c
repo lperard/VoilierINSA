@@ -38,3 +38,11 @@ void enableTimer3 (void) {
 int getAngleGirouette(void) {
 	return LL_TIM_GetCounter(TIM3) / 2; //0,5 degre par position, conversion CNT -> deg;
 }
+
+void setupCodeur(void) {
+	
+	// bloquant, necessite un tour de girouette
+	while(!LL_GPIO_IsInputPinSet (GPIOA, LL_GPIO_PIN_5)) {
+		LL_TIM_SetCounter(TIM3, RESETVALUE);
+	}
+}

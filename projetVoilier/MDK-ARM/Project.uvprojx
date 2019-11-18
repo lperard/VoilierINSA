@@ -338,7 +338,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER,HSE_VALUE=8000000U,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers</IncludePath>
+              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers;..\PeriphServices</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -390,6 +390,19 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD
+=======
+          <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>servoMoteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
           <Files>
             <File>
@@ -450,6 +463,7 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD
           <GroupName>MyDrivers</GroupName>
           <Files>
             <File>
@@ -460,6 +474,8 @@
           </Files>
         </Group>
         <Group>
+=======
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
           <GroupName>PeriphServices</GroupName>
           <Files>
             <File>
@@ -806,7 +822,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>STM32F103xB,USE_FULL_LL_DRIVER,HSE_VALUE=8000000U,USE_FULL_ASSERT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers</IncludePath>
+              <IncludePath>..\Inc;..\LLDrivers\inc;..\Services;..\MyDrivers;..\PeriphServices</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -858,6 +874,19 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD
+=======
+          <GroupName>MyDrivers</GroupName>
+          <Files>
+            <File>
+              <FileName>servoMoteur.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
           <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
           <Files>
             <File>
@@ -918,6 +947,7 @@
           </Files>
         </Group>
         <Group>
+<<<<<<< HEAD
           <GroupName>MyDrivers</GroupName>
           <Files>
             <File>
@@ -928,6 +958,8 @@
           </Files>
         </Group>
         <Group>
+=======
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
           <GroupName>PeriphServices</GroupName>
           <Files>
             <File>

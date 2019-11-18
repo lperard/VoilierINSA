@@ -6,9 +6,24 @@ Section Cross References
 
     main.o(i.SystemClock_Config) refers to stm32f1xx_ll_utils.o(i.LL_Init1msTick) for LL_Init1msTick
     main.o(i.SystemClock_Config) refers to stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock) for LL_SetSystemCoreClock
+<<<<<<< HEAD
     main.o(i.main) refers to codeurincr.o(i.initTimerCodeur) for initTimerCodeur
     main.o(i.main) refers to codeurincr.o(i.enableTimer3) for enableTimer3
     main.o(i.main) refers to main.o(.data) for RESETVALUE
+=======
+    main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
+    main.o(i.main) refers to gpioconf.o(i.GPIOConfig) for GPIOConfig
+    main.o(i.main) refers to servomoteur.o(i.initServoMoteur) for initServoMoteur
+    main.o(i.main) refers to servomoteur.o(i.enableServoMoteur) for enableServoMoteur
+    main.o(i.main) refers to servomoteur.o(i.setSailAngle) for setSailAngle
+    servomoteur.o(i.initServoMoteur) refers to stm32f1xx_ll_tim.o(i.LL_TIM_Init) for LL_TIM_Init
+    servomoteur.o(i.initServoMoteur) refers to stm32f1xx_ll_tim.o(i.LL_TIM_OC_StructInit) for LL_TIM_OC_StructInit
+    servomoteur.o(i.initServoMoteur) refers to stm32f1xx_ll_tim.o(i.LL_TIM_OC_Init) for LL_TIM_OC_Init
+    servomoteur.o(i.setSailAngle) refers to fflti.o(.text) for __aeabi_i2f
+    servomoteur.o(i.setSailAngle) refers to fmul.o(.text) for __aeabi_fmul
+    servomoteur.o(i.setSailAngle) refers to fadd.o(.text) for __aeabi_fadd
+    servomoteur.o(i.setSailAngle) refers to ffixi.o(.text) for __aeabi_f2iz
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     stm32f1xx_ll_rcc.o(i.LL_RCC_DeInit) refers to stm32f1xx_ll_rcc.o(i.LL_RCC_PLL_IsReady) for LL_RCC_PLL_IsReady
     stm32f1xx_ll_rcc.o(i.LL_RCC_GetADCClockFreq) refers to main.o(i.assert_failed) for assert_failed
     stm32f1xx_ll_rcc.o(i.LL_RCC_GetADCClockFreq) refers to stm32f1xx_ll_rcc.o(i.RCC_GetSystemClockFreq) for RCC_GetSystemClockFreq
@@ -89,8 +104,13 @@ Section Cross References
     startup_stm32f103xb.o(RESET) refers to startup_stm32f103xb.o(.text) for Reset_Handler
     startup_stm32f103xb.o(.text) refers to system_stm32f1xx.o(i.SystemInit) for SystemInit
     startup_stm32f103xb.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+<<<<<<< HEAD
     codeurincr.o(i.initTimerCodeur) refers to stm32f1xx_ll_tim.o(i.LL_TIM_Init) for LL_TIM_Init
     codeurincr.o(i.initTimerCodeur) refers to stm32f1xx_ll_tim.o(i.LL_TIM_ENCODER_Init) for LL_TIM_ENCODER_Init
+=======
+    gpioconf.o(i.GPIOConfig) refers to stm32f1xx_ll_gpio.o(i.LL_GPIO_StructInit) for LL_GPIO_StructInit
+    gpioconf.o(i.GPIOConfig) refers to stm32f1xx_ll_gpio.o(i.LL_GPIO_Init) for LL_GPIO_Init
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -98,6 +118,12 @@ Section Cross References
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    fadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fadd.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
     entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f103xb.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f103xb.o(STACK) for __initial_sp
@@ -115,8 +141,16 @@ Removing Unused input sections from the image.
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
+<<<<<<< HEAD
     Removing main.o(i.SystemClock_Config), (240 bytes).
     Removing main.o(.constdata), (35 bytes).
+=======
+    Removing servomoteur.o(.rev16_text), (4 bytes).
+    Removing servomoteur.o(.revsh_text), (4 bytes).
+    Removing servomoteur.o(.rrx_text), (6 bytes).
+    Removing servomoteur.o(i.disableServoMoteur), (24 bytes).
+    Removing servomoteur.o(.constdata), (35 bytes).
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     Removing stm32f1xx_ll_rcc.o(.rev16_text), (4 bytes).
     Removing stm32f1xx_ll_rcc.o(.revsh_text), (4 bytes).
     Removing stm32f1xx_ll_rcc.o(.rrx_text), (6 bytes).
@@ -163,14 +197,7 @@ Removing Unused input sections from the image.
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_HALLSENSOR_StructInit), (12 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_IC_Init), (92 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_IC_StructInit), (18 bytes).
-    Removing stm32f1xx_ll_tim.o(i.LL_TIM_OC_Init), (92 bytes).
-    Removing stm32f1xx_ll_tim.o(i.LL_TIM_OC_SetCompareCH2), (4 bytes).
-    Removing stm32f1xx_ll_tim.o(i.LL_TIM_OC_StructInit), (20 bytes).
     Removing stm32f1xx_ll_tim.o(i.LL_TIM_StructInit), (18 bytes).
-    Removing stm32f1xx_ll_tim.o(i.OC1Config), (404 bytes).
-    Removing stm32f1xx_ll_tim.o(i.OC2Config), (404 bytes).
-    Removing stm32f1xx_ll_tim.o(i.OC3Config), (404 bytes).
-    Removing stm32f1xx_ll_tim.o(i.OC4Config), (372 bytes).
     Removing stm32f1xx_ll_tim.o(.constdata), (35 bytes).
     Removing stm32f1xx_ll_gpio.o(.rev16_text), (4 bytes).
     Removing stm32f1xx_ll_gpio.o(.revsh_text), (4 bytes).
@@ -197,6 +224,7 @@ Removing Unused input sections from the image.
     Removing system_stm32f1xx.o(.rrx_text), (6 bytes).
     Removing system_stm32f1xx.o(i.SystemCoreClockUpdate), (164 bytes).
     Removing system_stm32f1xx.o(.constdata), (24 bytes).
+<<<<<<< HEAD
     Removing system_stm32f1xx.o(.data), (4 bytes).
     Removing startup_stm32f103xb.o(HEAP), (512 bytes).
     Removing codeurincr.o(.rev16_text), (4 bytes).
@@ -210,6 +238,14 @@ Removing Unused input sections from the image.
     Removing gpioconf.o(i.GPIOConfig), (28 bytes).
 
 96 unused section(s) (total 9413 bytes) removed from the image.
+=======
+    Removing startup_stm32f103xb.o(HEAP), (512 bytes).
+    Removing gpioconf.o(.rev16_text), (4 bytes).
+    Removing gpioconf.o(.revsh_text), (4 bytes).
+    Removing gpioconf.o(.rrx_text), (6 bytes).
+
+82 unused section(s) (total 7534 bytes) removed from the image.
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
 
 ==============================================================================
 
@@ -221,6 +257,7 @@ Image Symbol Table
 
     ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ../Src/system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
+<<<<<<< HEAD
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
@@ -228,18 +265,40 @@ Image Symbol Table
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+=======
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+<<<<<<< HEAD
+=======
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  fadd.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixi.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  fflti.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_gpio.c     0x00000000   Number         0  stm32f1xx_ll_gpio.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_rcc.c      0x00000000   Number         0  stm32f1xx_ll_rcc.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_tim.c      0x00000000   Number         0  stm32f1xx_ll_tim.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_usart.c    0x00000000   Number         0  stm32f1xx_ll_usart.o ABSOLUTE
     ..\LLDrivers\src\stm32f1xx_ll_utils.c    0x00000000   Number         0  stm32f1xx_ll_utils.o ABSOLUTE
+<<<<<<< HEAD
     ..\MyDrivers\codeurIncr.c                0x00000000   Number         0  codeurincr.o ABSOLUTE
+=======
+    ..\MyDrivers\servoMoteur.c               0x00000000   Number         0  servomoteur.o ABSOLUTE
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     ..\PeriphServices\GPIOConf.c             0x00000000   Number         0  gpioconf.o ABSOLUTE
     ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ..\Src\system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
@@ -248,7 +307,11 @@ Image Symbol Table
     ..\\LLDrivers\\src\\stm32f1xx_ll_tim.c   0x00000000   Number         0  stm32f1xx_ll_tim.o ABSOLUTE
     ..\\LLDrivers\\src\\stm32f1xx_ll_usart.c 0x00000000   Number         0  stm32f1xx_ll_usart.o ABSOLUTE
     ..\\LLDrivers\\src\\stm32f1xx_ll_utils.c 0x00000000   Number         0  stm32f1xx_ll_utils.o ABSOLUTE
+<<<<<<< HEAD
     ..\\MyDrivers\\codeurIncr.c              0x00000000   Number         0  codeurincr.o ABSOLUTE
+=======
+    ..\\MyDrivers\\servoMoteur.c             0x00000000   Number         0  servomoteur.o ABSOLUTE
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     ..\\PeriphServices\\GPIOConf.c           0x00000000   Number         0  gpioconf.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
     handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
@@ -266,6 +329,7 @@ Image Symbol Table
     .ARM.Collect$$$$00002712                 0x080000fc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
     __lit__00000000                          0x080000fc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x08000100   Section       36  startup_stm32f103xb.o(.text)
+<<<<<<< HEAD
     .text                                    0x08000124   Section       36  init.o(.text)
     i.LL_TIM_ENCODER_Init                    0x08000148   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_ENCODER_Init)
     i.LL_TIM_Init                            0x080003f8   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_Init)
@@ -279,13 +343,51 @@ Image Symbol Table
     i.main                                   0x08000604   Section        0  main.o(i.main)
     .data                                    0x20000000   Section        4  main.o(.data)
     RESETVALUE                               0x20000000   Data           4  main.o(.data)
+=======
+    .text                                    0x08000124   Section        0  fadd.o(.text)
+    .text                                    0x080001d4   Section        0  fmul.o(.text)
+    .text                                    0x08000238   Section        0  fflti.o(.text)
+    .text                                    0x0800024a   Section        0  ffixi.o(.text)
+    .text                                    0x0800027c   Section        0  iusefp.o(.text)
+    .text                                    0x0800027c   Section        0  fepilogue.o(.text)
+    .text                                    0x080002ec   Section       36  init.o(.text)
+    i.GPIOConfig                             0x08000310   Section        0  gpioconf.o(i.GPIOConfig)
+    i.LL_GPIO_Init                           0x0800034c   Section        0  stm32f1xx_ll_gpio.o(i.LL_GPIO_Init)
+    i.LL_GPIO_StructInit                     0x08000544   Section        0  stm32f1xx_ll_gpio.o(i.LL_GPIO_StructInit)
+    i.LL_Init1msTick                         0x0800055c   Section        0  stm32f1xx_ll_utils.o(i.LL_Init1msTick)
+    i.LL_SetSystemCoreClock                  0x08000578   Section        0  stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock)
+    i.LL_TIM_Init                            0x08000584   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_Init)
+    i.LL_TIM_OC_Init                         0x08000698   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_OC_Init)
+    i.LL_TIM_OC_SetCompareCH2                0x080006f4   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_OC_SetCompareCH2)
+    LL_TIM_OC_SetCompareCH2                  0x080006f5   Thumb Code     4  stm32f1xx_ll_tim.o(i.LL_TIM_OC_SetCompareCH2)
+    i.LL_TIM_OC_StructInit                   0x080006f8   Section        0  stm32f1xx_ll_tim.o(i.LL_TIM_OC_StructInit)
+    i.OC1Config                              0x0800070c   Section        0  stm32f1xx_ll_tim.o(i.OC1Config)
+    OC1Config                                0x0800070d   Thumb Code   354  stm32f1xx_ll_tim.o(i.OC1Config)
+    i.OC2Config                              0x080008a0   Section        0  stm32f1xx_ll_tim.o(i.OC2Config)
+    OC2Config                                0x080008a1   Thumb Code   356  stm32f1xx_ll_tim.o(i.OC2Config)
+    i.OC3Config                              0x08000a34   Section        0  stm32f1xx_ll_tim.o(i.OC3Config)
+    OC3Config                                0x08000a35   Thumb Code   354  stm32f1xx_ll_tim.o(i.OC3Config)
+    i.OC4Config                              0x08000bc8   Section        0  stm32f1xx_ll_tim.o(i.OC4Config)
+    OC4Config                                0x08000bc9   Thumb Code   324  stm32f1xx_ll_tim.o(i.OC4Config)
+    i.SystemClock_Config                     0x08000d3c   Section        0  main.o(i.SystemClock_Config)
+    i.SystemInit                             0x08000e1c   Section        0  system_stm32f1xx.o(i.SystemInit)
+    i.__scatterload_copy                     0x08000e74   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x08000e82   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x08000e84   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.assert_failed                          0x08000e92   Section        0  main.o(i.assert_failed)
+    i.enableServoMoteur                      0x08000e98   Section        0  servomoteur.o(i.enableServoMoteur)
+    i.initServoMoteur                        0x08000eb0   Section        0  servomoteur.o(i.initServoMoteur)
+    i.main                                   0x08000f28   Section        0  main.o(i.main)
+    i.setSailAngle                           0x08000f44   Section        0  servomoteur.o(i.setSailAngle)
+    .data                                    0x20000000   Section        4  system_stm32f1xx.o(.data)
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     STACK                                    0x20000008   Section     1024  startup_stm32f103xb.o(STACK)
 
     Global Symbols
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
     __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
     __cpp_initialize__aeabi_                  - Undefined Weak Reference
     __cxa_finalize                            - Undefined Weak Reference
@@ -357,6 +459,7 @@ Image Symbol Table
     USB_HP_CAN1_TX_IRQHandler                0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
     USB_LP_CAN1_RX0_IRQHandler               0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
     WWDG_IRQHandler                          0x0800011b   Thumb Code     0  startup_stm32f103xb.o(.text)
+<<<<<<< HEAD
     __scatterload                            0x08000125   Thumb Code    28  init.o(.text)
     __scatterload_rt2                        0x08000125   Thumb Code     0  init.o(.text)
     LL_TIM_ENCODER_Init                      0x08000149   Thumb Code   640  stm32f1xx_ll_tim.o(i.LL_TIM_ENCODER_Init)
@@ -371,6 +474,40 @@ Image Symbol Table
     main                                     0x08000605   Thumb Code    76  main.o(i.main)
     Region$$Table$$Base                      0x08000660   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x08000680   Number         0  anon$$obj.o(Region$$Table)
+=======
+    __aeabi_fadd                             0x08000125   Thumb Code   164  fadd.o(.text)
+    __aeabi_fsub                             0x080001c9   Thumb Code     6  fadd.o(.text)
+    __aeabi_frsub                            0x080001cf   Thumb Code     6  fadd.o(.text)
+    __aeabi_fmul                             0x080001d5   Thumb Code   100  fmul.o(.text)
+    __aeabi_i2f                              0x08000239   Thumb Code    18  fflti.o(.text)
+    __aeabi_f2iz                             0x0800024b   Thumb Code    50  ffixi.o(.text)
+    __I$use$fp                               0x0800027d   Thumb Code     0  iusefp.o(.text)
+    _float_round                             0x0800027d   Thumb Code    18  fepilogue.o(.text)
+    _float_epilogue                          0x0800028f   Thumb Code    92  fepilogue.o(.text)
+    __scatterload                            0x080002ed   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x080002ed   Thumb Code     0  init.o(.text)
+    GPIOConfig                               0x08000311   Thumb Code    46  gpioconf.o(i.GPIOConfig)
+    LL_GPIO_Init                             0x0800034d   Thumb Code   442  stm32f1xx_ll_gpio.o(i.LL_GPIO_Init)
+    LL_GPIO_StructInit                       0x08000545   Thumb Code    24  stm32f1xx_ll_gpio.o(i.LL_GPIO_StructInit)
+    LL_Init1msTick                           0x0800055d   Thumb Code    28  stm32f1xx_ll_utils.o(i.LL_Init1msTick)
+    LL_SetSystemCoreClock                    0x08000579   Thumb Code     6  stm32f1xx_ll_utils.o(i.LL_SetSystemCoreClock)
+    LL_TIM_Init                              0x08000585   Thumb Code   228  stm32f1xx_ll_tim.o(i.LL_TIM_Init)
+    LL_TIM_OC_Init                           0x08000699   Thumb Code    92  stm32f1xx_ll_tim.o(i.LL_TIM_OC_Init)
+    LL_TIM_OC_StructInit                     0x080006f9   Thumb Code    20  stm32f1xx_ll_tim.o(i.LL_TIM_OC_StructInit)
+    SystemClock_Config                       0x08000d3d   Thumb Code   212  main.o(i.SystemClock_Config)
+    SystemInit                               0x08000e1d   Thumb Code    70  system_stm32f1xx.o(i.SystemInit)
+    __scatterload_copy                       0x08000e75   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x08000e83   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x08000e85   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    assert_failed                            0x08000e93   Thumb Code     4  main.o(i.assert_failed)
+    enableServoMoteur                        0x08000e99   Thumb Code    18  servomoteur.o(i.enableServoMoteur)
+    initServoMoteur                          0x08000eb1   Thumb Code   112  servomoteur.o(i.initServoMoteur)
+    main                                     0x08000f29   Thumb Code    26  main.o(i.main)
+    setSailAngle                             0x08000f45   Thumb Code    52  servomoteur.o(i.setSailAngle)
+    Region$$Table$$Base                      0x08000f84   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000fa4   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_stm32f1xx.o(.data)
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     __initial_sp                             0x20000408   Data           0  startup_stm32f103xb.o(STACK)
 
 
@@ -381,6 +518,7 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
+<<<<<<< HEAD
   Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000684, Max: 0x00020000, ABSOLUTE)
 
     Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000680, Max: 0x00020000, ABSOLUTE)
@@ -420,6 +558,68 @@ Memory Map of the image
     0x20000000   0x08000680   0x00000004   Data   RW            8    .data               main.o
     0x20000004   0x08000684   0x00000004   PAD
     0x20000008        -       0x00000400   Zero   RW          589    STACK               startup_stm32f103xb.o
+=======
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000fa8, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000fa4, Max: 0x00020000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO          635    RESET               startup_stm32f103xb.o
+    0x080000ec   0x080000ec   0x00000000   Code   RO          667  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO          678    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO          681    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          683    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO          685    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO          686    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          688    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO          690    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO          679    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x08000100   0x00000024   Code   RO          636    .text               startup_stm32f103xb.o
+    0x08000124   0x08000124   0x000000b0   Code   RO          670    .text               mf_w.l(fadd.o)
+    0x080001d4   0x080001d4   0x00000064   Code   RO          672    .text               mf_w.l(fmul.o)
+    0x08000238   0x08000238   0x00000012   Code   RO          674    .text               mf_w.l(fflti.o)
+    0x0800024a   0x0800024a   0x00000032   Code   RO          676    .text               mf_w.l(ffixi.o)
+    0x0800027c   0x0800027c   0x00000000   Code   RO          692    .text               mc_w.l(iusefp.o)
+    0x0800027c   0x0800027c   0x0000006e   Code   RO          693    .text               mf_w.l(fepilogue.o)
+    0x080002ea   0x080002ea   0x00000002   PAD
+    0x080002ec   0x080002ec   0x00000024   Code   RO          695    .text               mc_w.l(init.o)
+    0x08000310   0x08000310   0x0000003c   Code   RO          643    i.GPIOConfig        gpioconf.o
+    0x0800034c   0x0800034c   0x000001f8   Code   RO          476    i.LL_GPIO_Init      stm32f1xx_ll_gpio.o
+    0x08000544   0x08000544   0x00000018   Code   RO          477    i.LL_GPIO_StructInit  stm32f1xx_ll_gpio.o
+    0x0800055c   0x0800055c   0x0000001c   Code   RO          217    i.LL_Init1msTick    stm32f1xx_ll_utils.o
+    0x08000578   0x08000578   0x0000000c   Code   RO          224    i.LL_SetSystemCoreClock  stm32f1xx_ll_utils.o
+    0x08000584   0x08000584   0x00000114   Code   RO          329    i.LL_TIM_Init       stm32f1xx_ll_tim.o
+    0x08000698   0x08000698   0x0000005c   Code   RO          330    i.LL_TIM_OC_Init    stm32f1xx_ll_tim.o
+    0x080006f4   0x080006f4   0x00000004   Code   RO          331    i.LL_TIM_OC_SetCompareCH2  stm32f1xx_ll_tim.o
+    0x080006f8   0x080006f8   0x00000014   Code   RO          332    i.LL_TIM_OC_StructInit  stm32f1xx_ll_tim.o
+    0x0800070c   0x0800070c   0x00000194   Code   RO          334    i.OC1Config         stm32f1xx_ll_tim.o
+    0x080008a0   0x080008a0   0x00000194   Code   RO          335    i.OC2Config         stm32f1xx_ll_tim.o
+    0x08000a34   0x08000a34   0x00000194   Code   RO          336    i.OC3Config         stm32f1xx_ll_tim.o
+    0x08000bc8   0x08000bc8   0x00000174   Code   RO          337    i.OC4Config         stm32f1xx_ll_tim.o
+    0x08000d3c   0x08000d3c   0x000000e0   Code   RO            4    i.SystemClock_Config  main.o
+    0x08000e1c   0x08000e1c   0x00000058   Code   RO          600    i.SystemInit        system_stm32f1xx.o
+    0x08000e74   0x08000e74   0x0000000e   Code   RO          699    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08000e82   0x08000e82   0x00000002   Code   RO          700    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000e84   0x08000e84   0x0000000e   Code   RO          701    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08000e92   0x08000e92   0x00000004   Code   RO            5    i.assert_failed     main.o
+    0x08000e96   0x08000e96   0x00000002   PAD
+    0x08000e98   0x08000e98   0x00000018   Code   RO           85    i.enableServoMoteur  servomoteur.o
+    0x08000eb0   0x08000eb0   0x00000078   Code   RO           86    i.initServoMoteur   servomoteur.o
+    0x08000f28   0x08000f28   0x0000001a   Code   RO            6    i.main              main.o
+    0x08000f42   0x08000f42   0x00000002   PAD
+    0x08000f44   0x08000f44   0x00000040   Code   RO           87    i.setSailAngle      servomoteur.o
+    0x08000f84   0x08000f84   0x00000020   Data   RO          697    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000fa4, Size: 0x00000408, Max: 0x00005000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08000fa4   0x00000004   Data   RW          602    .data               system_stm32f1xx.o
+    0x20000004   0x08000fa8   0x00000004   PAD
+    0x20000008        -       0x00000400   Zero   RW          633    STACK               startup_stm32f103xb.o
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
 
 
 ==============================================================================
@@ -429,6 +629,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
+<<<<<<< HEAD
        124         16          0          0          0      25057   codeurincr.o
         96         16          0          4          0     375967   main.o
         36          8        236          0       1024        776   startup_stm32f103xb.o
@@ -437,8 +638,21 @@ Image component sizes
 
     ----------------------------------------------------------------------
       1310        154        268          4       1028     432341   Object Totals
+=======
+        60         14          0          0          0       8361   gpioconf.o
+       254         12          0          0          0     356052   main.o
+       208         26          0          0          0      28345   servomoteur.o
+        36          8        236          0       1024        756   startup_stm32f103xb.o
+       528         62          0          0          0      10856   stm32f1xx_ll_gpio.o
+      1976        244          0          0          0      34070   stm32f1xx_ll_tim.o
+        40          6          0          0          0       2033   stm32f1xx_ll_utils.o
+        88         18          0          4          0       1099   system_stm32f1xx.o
+
+    ----------------------------------------------------------------------
+      3194        390        268          4       1028     441572   Object Totals
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
          0          0         32          0          0          0   (incl. Generated)
-         2          0          0          0          4          0   (incl. Padding)
+         4          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -454,19 +668,26 @@ Image component sizes
          8          4          0          0          0          0   entry9a.o
         30          0          0          0          0          0   handlers.o
         36          8          0          0          0         68   init.o
+         0          0          0          0          0          0   iusefp.o
+       176          0          0          0          0        140   fadd.o
+       110          0          0          0          0        168   fepilogue.o
+        50          0          0          0          0         68   ffixi.o
+        18          0          0          0          0         68   fflti.o
+       100          0          0          0          0         76   fmul.o
 
     ----------------------------------------------------------------------
-        86         16          0          0          0         68   Library Totals
-         0          0          0          0          0          0   (incl. Padding)
+       542         16          0          0          0        588   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
         86         16          0          0          0         68   mc_w.l
+       454          0          0          0          0        520   mf_w.l
 
     ----------------------------------------------------------------------
-        86         16          0          0          0         68   Library Totals
+       542         16          0          0          0        588   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -475,6 +696,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
+<<<<<<< HEAD
       1396        170        268          4       1028     432301   Grand Totals
       1396        170        268          4       1028     432301   ELF Image Totals
       1396        170        268          4          0          0   ROM Totals
@@ -484,6 +706,17 @@ Image component sizes
     Total RO  Size (Code + RO Data)                 1664 (   1.63kB)
     Total RW  Size (RW Data + ZI Data)              1032 (   1.01kB)
     Total ROM Size (Code + RO Data + RW Data)       1668 (   1.63kB)
+=======
+      3736        406        268          4       1028     441220   Grand Totals
+      3736        406        268          4       1028     441220   ELF Image Totals
+      3736        406        268          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 4004 (   3.91kB)
+    Total RW  Size (RW Data + ZI Data)              1032 (   1.01kB)
+    Total ROM Size (Code + RO Data + RW Data)       4008 (   3.91kB)
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
 
 ==============================================================================
 

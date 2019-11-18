@@ -130,7 +130,11 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGTARM</Key>
+<<<<<<< HEAD
           <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(1011=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(120=1477,232,1898,637,0)(121=-1,-1,-1,-1,0)(122=761,128,1182,533,0)(123=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(200=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(132=830,152,1424,846,0)(133=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(161=-1,-1,-1,-1,0)(162=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(211=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(221=-1,-1,-1,-1,0)(230=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(151=-1,-1,-1,-1,0)</Name>
+=======
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(1011=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(120=748,84,1169,489,0)(121=-1,-1,-1,-1,0)(122=681,192,1102,597,0)(123=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(200=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(130=1048,168,1642,862,0)(131=-1,-1,-1,-1,0)(132=-1,-1,-1,-1,0)(133=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(161=-1,-1,-1,-1,0)(162=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(211=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(221=-1,-1,-1,-1,0)(230=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(151=-1,-1,-1,-1,0)</Name>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -333,7 +337,11 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGDARM</Key>
+<<<<<<< HEAD
           <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(1011=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(120=-1,-1,-1,-1,0)(121=-1,-1,-1,-1,0)(122=1088,189,1509,616,0)(123=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(200=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(130=-1,-1,-1,-1,0)(131=-1,-1,-1,-1,0)(132=599,28,1193,779,0)(133=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(161=1088,383,1536,797,0)(162=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(211=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(221=-1,-1,-1,-1,0)(230=-1,-1,-1,-1,0)(234=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(151=-1,-1,-1,-1,0)</Name>
+=======
+          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(100=-1,-1,-1,-1,0)(110=-1,-1,-1,-1,0)(111=-1,-1,-1,-1,0)(1011=-1,-1,-1,-1,0)(180=-1,-1,-1,-1,0)(120=1574,349,1995,776,0)(121=-1,-1,-1,-1,0)(122=1088,189,1509,616,0)(123=-1,-1,-1,-1,0)(140=-1,-1,-1,-1,0)(240=-1,-1,-1,-1,0)(190=-1,-1,-1,-1,0)(200=-1,-1,-1,-1,0)(170=-1,-1,-1,-1,0)(130=997,225,1591,976,0)(131=-1,-1,-1,-1,0)(132=-1,-1,-1,-1,0)(133=-1,-1,-1,-1,0)(160=-1,-1,-1,-1,0)(161=1427,383,1875,797,0)(162=-1,-1,-1,-1,0)(210=-1,-1,-1,-1,0)(211=-1,-1,-1,-1,0)(220=-1,-1,-1,-1,0)(221=-1,-1,-1,-1,0)(230=-1,-1,-1,-1,0)(234=-1,-1,-1,-1,0)(231=-1,-1,-1,-1,0)(232=-1,-1,-1,-1,0)(233=-1,-1,-1,-1,0)(150=-1,-1,-1,-1,0)(151=-1,-1,-1,-1,0)</Name>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -394,7 +402,7 @@
         <AscS3>0</AscS3>
         <aSer3>0</aSer3>
         <eProf>0</eProf>
-        <aLa>0</aLa>
+        <aLa>1</aLa>
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
         <aSer4>0</aSer4>
@@ -416,6 +424,16 @@
       <pszMrulep></pszMrulep>
       <pSingCmdsp></pSingCmdsp>
       <pMultCmdsp></pMultCmdsp>
+<<<<<<< HEAD
+=======
+      <LogicAnalyzers>
+        <Wi>
+          <IntNumber>0</IntNumber>
+          <FirstString>((PORTA &amp; 0x00000100) &gt;&gt; 8 &amp; 0x100) &gt;&gt; 8</FirstString>
+          <SecondString>FF000000000000000000000000000000E0FFEF400100000000000000000000000000000028504F5254412026203078303030303031303029203E3E2038000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000001000000000000000000F03F10000000000000000000000000000000000000001E0B0008</SecondString>
+        </Wi>
+      </LogicAnalyzers>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <DebugDescription>
         <Enable>1</Enable>
         <EnableFlashSeq>0</EnableFlashSeq>
@@ -447,7 +465,9 @@
   </Group>
 
   <Group>
-    <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
+<<<<<<< HEAD
+=======
+    <GroupName>MyDrivers</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -455,6 +475,32 @@
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>2</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>1</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\MyDrivers\servoMoteur.c</PathWithFileName>
+      <FilenameWithoutPath>servoMoteur.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+  </Group>
+
+  <Group>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
+    <GroupName>Drivers/STM32f1xx_LL_Driver</GroupName>
+    <tvExp>1</tvExp>
+    <tvExpOptDlg>0</tvExpOptDlg>
+    <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
+    <File>
+<<<<<<< HEAD
+      <GroupNumber>2</GroupNumber>
+      <FileNumber>2</FileNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>3</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -465,8 +511,13 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>2</GroupNumber>
       <FileNumber>3</FileNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>4</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -477,8 +528,13 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>2</GroupNumber>
       <FileNumber>4</FileNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>5</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -489,8 +545,13 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>2</GroupNumber>
       <FileNumber>5</FileNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>6</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -501,8 +562,13 @@
       <bShared>0</bShared>
     </File>
     <File>
+<<<<<<< HEAD
       <GroupNumber>2</GroupNumber>
       <FileNumber>6</FileNumber>
+=======
+      <GroupNumber>3</GroupNumber>
+      <FileNumber>7</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -521,8 +587,13 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>3</GroupNumber>
       <FileNumber>7</FileNumber>
+=======
+      <GroupNumber>4</GroupNumber>
+      <FileNumber>8</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>5</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -541,8 +612,13 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>4</GroupNumber>
       <FileNumber>8</FileNumber>
+=======
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>9</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>1</FileType>
       <tvExp>1</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -561,8 +637,13 @@
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
     <File>
+<<<<<<< HEAD
       <GroupNumber>5</GroupNumber>
       <FileNumber>9</FileNumber>
+=======
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>10</FileNumber>
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -575,6 +656,7 @@
   </Group>
 
   <Group>
+<<<<<<< HEAD
     <GroupName>MyDrivers</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
@@ -595,6 +677,8 @@
   </Group>
 
   <Group>
+=======
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8
     <GroupName>PeriphServices</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>

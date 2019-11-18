@@ -10,6 +10,11 @@ nucleo-f103rb\main.o: C:\Users\Lucas Perard\AppData\Local\Arm\Packs\ARM\CMSIS\5.
 nucleo-f103rb\main.o: ..\Inc\system_stm32f1xx.h
 nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_utils.h
 nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_system.h
+<<<<<<< HEAD
 nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_tim.h
 nucleo-f103rb\main.o: ..\LLDrivers\inc\stm32f1xx_ll_gpio.h
 nucleo-f103rb\main.o: ..\MyDrivers\codeurIncr.h
+=======
+nucleo-f103rb\main.o: ..\MyDrivers\servoMoteur.h
+nucleo-f103rb\main.o: ..\PeriphServices\GPIOConf.h
+>>>>>>> 78e74a3762dd36dd44f964cd5b645501f03464b8

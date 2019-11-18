@@ -1,6 +1,8 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
+#include "servoMoteur.h"
+#include "GPIOConf.h"
 
 #include "stm32f1xx_ll_tim.h"
 #include "stm32f1xx_ll_gpio.h"
@@ -18,15 +20,31 @@ void  SystemClock_Config(void);
 	
 int main(void)
 {	
-	GPIOConfig();
+	/* Infinite loop */
+	//config the system clock
+	SystemClock_Config();
 	
-	//codeur incremental
+	//init and config the gpio
+	GPIOConfig();	
+	
+	/* codeur incremental */
 	initTimerCodeur();
 	enableTimer3();
 	setupCodeur(); // attend un tour de girouette	
-
+	
+	/* servo moteur */
+	//init servoMoteur service
+	initServoMoteur();
+	
+	//start servo moteur service
+	enableServoMoteur();
+	//max = 100 deg
+	
   /* Infinite loop */
-  while (1);
+  while (1)
+  {
+		setSailAngle(30);
+  }
 }
 
 
@@ -54,7 +72,7 @@ void SystemClock_Config(void)
   /* Enable HSE oscillator */
 	// ********* Commenter la ligne ci-dessous pour MCBSTM32 *****************
 	// ********* Conserver la ligne si Nucléo*********************************
-  LL_RCC_HSE_EnableBypass();
+ // LL_RCC_HSE_EnableBypass();
   LL_RCC_HSE_Enable();
   while(LL_RCC_HSE_IsReady() != 1)
   {

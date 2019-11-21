@@ -4,5 +4,6 @@
 #define READRF_H
 
 void initReadRF (void);
+float readRemote(void);
 
 #endif

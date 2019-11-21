@@ -18,29 +18,25 @@ void  SystemClock_Config(void);
   * @param  None
   * @retval None
   */
-	
+
 int main(void)
 {	
-	/* Infinite loop */
-	//config the system clock
+	/* configure the system clock */
 	SystemClock_Config();
 	
-	//init and config the gpio
+	/* init and config all the gpios */
 	GPIOConfig();	
 	
 	/* codeur incremental */
 	initTimerCodeur();
-	enableTimer3();
-	setupCodeur(); // attend un tour de girouette	
+	waitForGirouette();	
 	
 	/* servo moteur */
-	//init servoMoteur service
 	initServoMoteur();
-	
-	//start servo moteur service
 	enableServoMoteur();
 	//max = 100 deg
 	
+	/* setup the rf receiver */
 	initReadRF();
 	
   /* Infinite loop */

@@ -5,7 +5,8 @@ void GPIOConfig(void) {
 
 	//enable gpio clock
 	RCC -> APB2ENR |= RCC_APB2ENR_IOPAEN;
-	RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
+	RCC -> APB2ENR |= RCC_APB2ENR_IOPBEN;
+	RCC -> APB2ENR |= RCC_APB2ENR_IOPCEN;
 	
 	//gpio conf for pwm servo moteur
 	LL_GPIO_InitTypeDef initGPIOA8;

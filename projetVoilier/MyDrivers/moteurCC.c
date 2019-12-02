@@ -24,7 +24,7 @@ void initMoteurCC (void){
 	
 	/*****Init PWM*****/
 	//Init the struct
-	LL_TIM_Init(TIM1,&TIM2InitStruct);
+	LL_TIM_Init(TIM2,&TIM2InitStruct);
 	
 	
 	//struct use to config the output mode of the PWM on TIM1

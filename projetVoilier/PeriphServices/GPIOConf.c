@@ -18,16 +18,16 @@ void GPIOConfig(void) {
 	//gpio conf for pwm moteur cc
 	LL_GPIO_InitTypeDef initGPIOA1;
 	LL_GPIO_StructInit(&initGPIOA1);
-	initGPIOA8.Pin = LL_GPIO_PIN_1;
-	initGPIOA8.Mode = LL_GPIO_MODE_ALTERNATE;
-	initGPIOA8.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	initGPIOA1.Pin = LL_GPIO_PIN_1;
+	initGPIOA1.Mode = LL_GPIO_MODE_ALTERNATE;
+	initGPIOA1.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
 	LL_GPIO_Init(GPIOA, &initGPIOA1);
 	
 	//gpio conf for sens moteur cc
 	LL_GPIO_InitTypeDef initGPIOA2;
 	LL_GPIO_StructInit(&initGPIOA2);
-	initGPIOA8.Pin = LL_GPIO_PIN_2;
-	initGPIOA8.Mode = LL_GPIO_MODE_OUTPUT;
-	initGPIOA8.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
+	initGPIOA2.Pin = LL_GPIO_PIN_2;
+	initGPIOA2.Mode = LL_GPIO_MODE_OUTPUT;
+	initGPIOA2.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
 	LL_GPIO_Init(GPIOA, &initGPIOA2);
 }

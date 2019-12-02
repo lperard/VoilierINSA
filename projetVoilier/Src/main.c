@@ -49,7 +49,7 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-		navigate(25,1);
+		navigate(25,0);
   }
 }
 

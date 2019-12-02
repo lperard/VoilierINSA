@@ -1,14 +1,13 @@
 #include "stm32f1xx_ll_rcc.h" // utile dans la fonction SystemClock_Config
 #include "stm32f1xx_ll_utils.h"   // utile dans la fonction SystemClock_Config
-#include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Config
+#include "stm32f1xx_ll_system.h" // utile dans la fonction SystemClock_Confi
 #include "stm32f1xx_ll_tim.h"
 #include "stm32f1xx_ll_gpio.h"
-
-#include "servoMoteur.h"
-#include "GPIOConf.h"
 #include "codeurIncr.h"
+#include "GPIOConf.h"
+#include "servoMoteur.h"
+#include "moteurCC.h"
 #include "readRF.h"
-
 void  SystemClock_Config(void);
 static int a;
 
@@ -19,13 +18,14 @@ static int a;
   * @param  None
   * @retval None
   */
-
+	
 int main(void)
 {	
-	/* configure the system clock */
+	/* Infinite loop */
+	//config the system clock
 	SystemClock_Config();
 	
-	/* init and config all the gpios */
+	//init and config the gpio
 	GPIOConfig();	
 	
 	/* codeur incremental */
@@ -40,15 +40,31 @@ int main(void)
 	/* setup the rf receiver */
 	initReadRF();
 	
-	a = 30;
-	setSailAngle (a);
+	/* servo moteur */
+	//init servoMoteur service
+	initServoMoteur();
+	
+	//start servo moteur service
+	enableServoMoteur();
+	//max = 100 deg
+	
+	/* moteur cc */
+	//init moteur cc service
+	initMoteurCC();
+	
+	//start moteur CC service
+	enableMoteurCC();
+	
   /* Infinite loop */
   while (1)
   {
+		navigate(25,0);
 		a = getAngleGirouette();
 		setAngleFromGirouette(a);
   }
 }
+
+
 
 /**
   * @brief  System Clock Configuration

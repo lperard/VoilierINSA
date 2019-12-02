@@ -134,7 +134,7 @@
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
             <Capability>1</Capability>
-            <DriverSelection>4101</DriverSelection>
+            <DriverSelection>4096</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
@@ -460,6 +460,11 @@
               <FileName>servoMoteur.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
+            </File>
+            <File>
+              <FileName>moteurCC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\moteurCC.c</FilePath>
             </File>
             <File>
               <FileName>readRF.c</FileName>
@@ -937,6 +942,11 @@
               <FileName>servoMoteur.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\MyDrivers\servoMoteur.c</FilePath>
+            </File>
+            <File>
+              <FileName>moteurCC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MyDrivers\moteurCC.c</FilePath>
             </File>
             <File>
               <FileName>readRF.c</FileName>

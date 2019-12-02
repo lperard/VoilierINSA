@@ -1,4 +1,4 @@
-
+﻿
 # Projet Voilier 4IR INSA TOULOUSE
 
 Réalisé par Lucas Pérard, Clément Géhin, Ruben Gres et Phillipe Saade
@@ -6,6 +6,7 @@ Réalisé par Lucas Pérard, Clément Géhin, Ruben Gres et Phillipe Saade
 ## Fonctionnalités développées :
 
 * Girouette : un codeur incrémental permet de renvoyer l'angle de la girouette en degré, le degré 0 correspond à l'avant du bateau.
+
 ATTENTION : Avant de mettre le bateau à l'eau, il est necessaire de faire un tour de girouette afin de trouver l'origine.
 	
 * Servo moteur : permet de contrôler le déplacement de la voile en fonction de l'angle transmit par la girouette. La voile se déplace entre un angle de 30 et 100 degrés.

@@ -54,7 +54,7 @@ void initReadRF (void){
 }
 
 float readRemote() {
-	int remoteMin = 0x71;
-	int remoteMax = 0xBF;
+	int remoteMin = 0x60;
+	int remoteMax = 0xB0;
 	return (TIM4->CCR2 - remoteMin) / ((remoteMax - remoteMin) * 1.0);
 }

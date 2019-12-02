@@ -60,7 +60,7 @@ void disableMoteurCC(void) {
 
 //speed between 0 and 100 %
 void setBoardSpeed (int relativeSpeed) {
-	int compareValue = (relativeSpeed / 2) - 1;
+	int compareValue = (relativeSpeed / 2);
 	LL_TIM_OC_SetCompareCH2(TIM2, compareValue);
 }
 

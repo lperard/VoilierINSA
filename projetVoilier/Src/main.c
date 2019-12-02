@@ -18,9 +18,7 @@ static int a;
   * @param  None
   * @retval None
   */
-	
-	static float rm;
-	
+
 int main(void)
 {	
 	/* Infinite loop */
@@ -60,17 +58,17 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-		rm = readRemote();
+		float rm = readRemote();		
 		
-		/*
-		if(rm < 0.48 && rm > 0.52) {
+		if(rm > 0.4 && rm < 0.6) {
 			navigate(0,1);
 		} else if (rm < 0.5) {
-			navigate((int) (rm * 200),-1);
+			int speed = (0.5 - rm) * 200;
+			navigate(speed,-1);
 		} else {
-			navigate((int) ((rm - 0.5) * 200),1);
-		}
-		*/
+			int speed = (rm - 0.5) * 200;
+			navigate(speed,1);
+		}	
 		
 		a = getAngleGirouette();
 		setAngleFromGirouette(a);

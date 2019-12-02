@@ -19,6 +19,8 @@ static int a;
   * @retval None
   */
 	
+	static float rm;
+	
 int main(void)
 {	
 	/* Infinite loop */
@@ -58,7 +60,18 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-		navigate(25,0);
+		rm = readRemote();
+		
+		/*
+		if(rm < 0.48 && rm > 0.52) {
+			navigate(0,1);
+		} else if (rm < 0.5) {
+			navigate((int) (rm * 200),-1);
+		} else {
+			navigate((int) ((rm - 0.5) * 200),1);
+		}
+		*/
+		
 		a = getAngleGirouette();
 		setAngleFromGirouette(a);
   }

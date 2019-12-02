@@ -16,4 +16,5 @@ void disableServoMoteur(void);
 
 void setSailAngle (int angle) ;
 
+void setAngleFromGirouette (int angle);
 #endif

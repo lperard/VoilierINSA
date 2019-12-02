@@ -29,7 +29,7 @@ int main(void)
 	
 	/* codeur incremental */
 	initTimerCodeur();
-	waitForGirouette();	
+	waitForGirouette();
 	
 	/* servo moteur */
 	initServoMoteur();
@@ -42,11 +42,10 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
+		float a = readRemote();
 		setSailAngle(30);
   }
 }
-
-
 
 /**
   * @brief  System Clock Configuration

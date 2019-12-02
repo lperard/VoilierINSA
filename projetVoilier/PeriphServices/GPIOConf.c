@@ -31,3 +31,4 @@ void GPIOConfig(void) {
 	initGPIOA2.OutputType = LL_GPIO_OUTPUT_PUSHPULL;
 	LL_GPIO_Init(GPIOA, &initGPIOA2);
 }
+

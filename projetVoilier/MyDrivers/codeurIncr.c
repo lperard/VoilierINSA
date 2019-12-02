@@ -28,19 +28,17 @@ void initTimerCodeur (void) {
 	encInit.IC2Prescaler = LL_TIM_ICPSC_DIV1;
 	encInit.IC2Polarity = LL_TIM_IC_POLARITY_RISING;
 	
+	TIM3-> DIER |= TIM_DIER_CC1IE;
+	TIM3-> DIER |= TIM_DIER_CC2IE;
+	
 	LL_TIM_ENCODER_Init(TIM3, &encInit);
-}
-
-void enableTimer3 (void) {
-	LL_TIM_EnableCounter(TIM3);
 }
 
 int getAngleGirouette(void) {
 	return LL_TIM_GetCounter(TIM3) / 2; //0,5 degre par position, conversion CNT -> deg;
 }
 
-void setupCodeur(void) {
-	
+void waitForGirouette(void) {
 	// bloquant, necessite un tour de girouette
 	while(!LL_GPIO_IsInputPinSet (GPIOA, LL_GPIO_PIN_5)) {
 		LL_TIM_SetCounter(TIM3, RESETVALUE);

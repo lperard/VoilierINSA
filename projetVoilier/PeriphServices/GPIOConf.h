@@ -6,4 +6,3 @@
 void GPIOConfig(void);
 
 #endif
-

@@ -6,8 +6,9 @@
 	static int RESETVALUE = 0x011B; // 0x02D0 - 0x01B5
 
 	void initTimerCodeur (void);
-	void enableTimer3 (void);
+	
+	/* renvoie l'angle de la girouette (en degre) */
 	int getAngleGirouette(void);
-	void setupCodeur(void);
+	void waitForGirouette(void);
 
 #endif

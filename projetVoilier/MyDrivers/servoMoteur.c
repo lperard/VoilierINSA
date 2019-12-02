@@ -86,26 +86,23 @@ void setSailAngle (int angle) {
 	LL_TIM_OC_SetCompareCH1(TIM1,(int) compareValue);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void setAngleFromGirouette (int angleGirouette) {
+	if (angleGirouette < 45){
+		setSailAngle (30);
+	}
+	else if (angleGirouette < 55){
+		setSailAngle (40);
+	}
+	else if (angleGirouette < 75){
+		setSailAngle (40);
+	}
+	else if (angleGirouette < 105){
+		setSailAngle (65);
+	}
+	else if (angleGirouette < 150){
+		setSailAngle (80);
+	}
+	else if (angleGirouette > 150){
+		setSailAngle (100);
+	}
+}

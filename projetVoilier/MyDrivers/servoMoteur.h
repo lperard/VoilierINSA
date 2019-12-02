@@ -1,4 +1,4 @@
-//driver for the servo moteur//
+//driver for the rf receiver//
 
 #ifndef SERVO_MOTEUR_H
 #define SERVO_MOTEUR_H
@@ -16,4 +16,5 @@ void disableServoMoteur(void);
 
 void setSailAngle (int angle) ;
 
+void setAngleFromGirouette (int angleGirouette);
 #endif

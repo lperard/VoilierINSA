@@ -7,6 +7,7 @@
 #include "GPIOConf.h"
 #include "servoMoteur.h"
 #include "moteurCC.h"
+#include "readRF.h"
 void  SystemClock_Config(void);
 
 /* Private functions ---------------------------------------------------------*/
@@ -27,9 +28,16 @@ int main(void)
 	GPIOConfig();	
 	
 	/* codeur incremental */
-	/*initTimerCodeur();
-	enableTimer3();
-	setupCodeur(); // attend un tour de girouette	*/
+	initTimerCodeur();
+	waitForGirouette();
+	
+	/* servo moteur */
+	initServoMoteur();
+	enableServoMoteur();
+	//max = 100 deg
+	
+	/* setup the rf receiver */
+	initReadRF();
 	
 	/* servo moteur */
 	//init servoMoteur service

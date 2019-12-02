@@ -16,3 +16,4 @@ nucleo-f103rb\main.o: ..\MyDrivers\codeurIncr.h
 nucleo-f103rb\main.o: ..\PeriphServices\GPIOConf.h
 nucleo-f103rb\main.o: ..\MyDrivers\servoMoteur.h
 nucleo-f103rb\main.o: ..\MyDrivers\moteurCC.h
+nucleo-f103rb\main.o: ..\MyDrivers\readRF.h

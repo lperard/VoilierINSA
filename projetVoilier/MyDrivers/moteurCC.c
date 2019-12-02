@@ -79,9 +79,23 @@ void setBoardOrientation (int orientation) {
 void navigate (int speed, int orientation) {
 	setBoardSpeed (speed);
 	setBoardOrientation(orientation);
-}	
+}
 
-
+void movePlateau(float rm) {
+	int speed;
+		int way;	
+		if(rm < 0 || rm > 1 || (rm > 0.4 && rm < 0.6)) { //si la telecommande renvoie nimp ou point mort
+			speed = 0;
+			way = 1;
+		} else if (rm < 0.5) {
+			speed = (0.5 - rm) * 200;
+			way = -1;
+		} else {
+			speed = (rm - 0.5) * 200;
+			way = 1;
+		}		
+		navigate(speed,way);
+}
 
 
 

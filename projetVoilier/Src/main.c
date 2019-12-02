@@ -9,7 +9,6 @@
 #include "moteurCC.h"
 #include "readRF.h"
 void  SystemClock_Config(void);
-static int a;
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -59,20 +58,11 @@ int main(void)
   while (1)
   {
 		float rm = readRemote();		
+		movePlateau(rm);
 		
-		if(rm > 0.4 && rm < 0.6) {
-			navigate(0,1);
-		} else if (rm < 0.5) {
-			int speed = (0.5 - rm) * 200;
-			navigate(speed,-1);
-		} else {
-			int speed = (rm - 0.5) * 200;
-			navigate(speed,1);
-		}	
-		
-		a = getAngleGirouette();
+		int a = getAngleGirouette();
 		setAngleFromGirouette(a);
-  }
+	}
 }
 
 

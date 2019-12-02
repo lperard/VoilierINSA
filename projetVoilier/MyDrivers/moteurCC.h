@@ -20,4 +20,6 @@ void setBoardOrientation (int orientation);
 
 void navigate (int speed, int orientation);
 
+void movePlateau (float rm);
+
 #endif

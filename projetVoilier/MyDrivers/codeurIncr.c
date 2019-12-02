@@ -28,6 +28,9 @@ void initTimerCodeur (void) {
 	encInit.IC2Prescaler = LL_TIM_ICPSC_DIV1;
 	encInit.IC2Polarity = LL_TIM_IC_POLARITY_RISING;
 	
+	TIM3-> DIER |= TIM_DIER_CC1IE;
+	TIM3-> DIER |= TIM_DIER_CC2IE;
+	
 	LL_TIM_ENCODER_Init(TIM3, &encInit);
 }
 

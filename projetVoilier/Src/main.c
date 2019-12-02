@@ -10,6 +10,7 @@
 #include "readRF.h"
 
 void  SystemClock_Config(void);
+static int a;
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -39,11 +40,14 @@ int main(void)
 	/* setup the rf receiver */
 	initReadRF();
 	
+	a = 30;
+	setSailAngle (a);
   /* Infinite loop */
   while (1)
   {
-		float a = readRemote();
-		setSailAngle(30);
+		a = getAngleGirouette();
+		//setAngleFromGirouette(a);
+		
   }
 }
 

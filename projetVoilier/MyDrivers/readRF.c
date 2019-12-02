@@ -54,7 +54,8 @@ void initReadRF (void){
 }
 
 float readRemote() {
-	int remoteMin = 0x60;
-	int remoteMax = 0xB0;
+	//avec le molette steerring au milieu
+	int remoteMin = 0x6E;
+	int remoteMax = 0xC1;
 	return (TIM4->CCR2 - remoteMin) / ((remoteMax - remoteMin) * 1.0);
 }

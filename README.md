@@ -15,7 +15,7 @@ ATTENTION : Avant de mettre le bateau à l'eau, il est necessaire de faire un to
 
 * Contrôle du plateau : permet de contrôler le sens et la vitesse de rotation du plateau. La vitesse est donnée entre 0% et 100% de la vitesse max et le sens est déterminé comme suit : 1 pour droite et -1 pour gauche
 	
-* Télécommande : il est possible de contrôler le plateau en sens et en vitesse à l'aide d'une télécommande.
+* Télécommande : il est possible de contrôler le plateau en sens et en vitesse à l'aide d'une télécommande. Le parametre direction de la télécommande doit être au milieu de sa course pour bien capter la commande.
 	
 ## Organisation du projet :
 

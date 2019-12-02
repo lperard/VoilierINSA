@@ -46,8 +46,7 @@ int main(void)
   while (1)
   {
 		a = getAngleGirouette();
-		//setAngleFromGirouette(a);
-		
+		setAngleFromGirouette(a);
   }
 }
 

@@ -87,22 +87,22 @@ void setSailAngle (int angle) {
 }
 
 void setAngleFromGirouette (int angleGirouette) {
-	if (angleGirouette < 45){
+	if ((angleGirouette < 45) || (angleGirouette > 315)){
 		setSailAngle (30);
 	}
-	else if (angleGirouette < 55){
+	else if ((angleGirouette < 55) || (angleGirouette > 305)) {
 		setSailAngle (40);
 	}
-	else if (angleGirouette < 75){
+	else if ((angleGirouette < 75) || (angleGirouette > 285)){
 		setSailAngle (40);
 	}
-	else if (angleGirouette < 105){
+	else if ((angleGirouette < 105) || (angleGirouette > 255)){
 		setSailAngle (65);
 	}
-	else if (angleGirouette < 150){
+	else if ((angleGirouette < 150) || (angleGirouette > 210)){
 		setSailAngle (80);
 	}
-	else if (angleGirouette > 150){
+	else if ((angleGirouette > 150) || (angleGirouette < 210)){
 		setSailAngle (100);
 	}
 }

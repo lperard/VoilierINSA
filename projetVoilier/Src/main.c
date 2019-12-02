@@ -10,8 +10,6 @@
 #include "readRF.h"
 void  SystemClock_Config(void);
 
-/* Private functions ---------------------------------------------------------*/
-
 /**
   * @brief  Main program
   * @param  None
@@ -57,11 +55,11 @@ int main(void)
   /* Infinite loop */
   while (1)
   {
-		float rm = readRemote();		
-		movePlateau(rm);
+		float posRemote = readRemote();		
+		movePlateau(posRemote);
 		
-		int a = getAngleGirouette();
-		setAngleFromGirouette(a);
+		int angleG = getAngleGirouette();
+		setAngleFromGirouette(angleG);
 	}
 }
 

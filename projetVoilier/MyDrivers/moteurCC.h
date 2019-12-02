@@ -3,11 +3,6 @@
 #ifndef MOTEUR_CC_H
 #define MOTEUR_CC_H
 
-/*
-@brief : config TIMER
-@param : none
-@return : none
-*/
 void initMoteurCC (void);
 
 void enableMoteurCC(void);

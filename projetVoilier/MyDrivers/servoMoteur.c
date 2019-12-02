@@ -47,11 +47,8 @@ void initServoMoteur (void) {
 	TIM1 -> BDTR |= 0x1 << 15;
 
 	//bind the PWM struct with the timer and the channel
-	LL_TIM_OC_Init(TIM1, LL_TIM_CHANNEL_CH1, &PWMInitStruct);
-	
-	
+	LL_TIM_OC_Init(TIM1, LL_TIM_CHANNEL_CH1, &PWMInitStruct);	
 }
-
 
 /**
 	* @brief : Start servoMoteur service
@@ -73,10 +70,10 @@ void disableServoMoteur(void)
 		LL_TIM_DisableCounter(TIM1);
 }
 
-/*
-@brief : set the angle of the sail (0 to 60 degrees)
-@param : angle wanted
-@return : none
+/**
+	* @brief : set the angle of the sail
+	* @param : angle wanted
+	* @return : none
 */
 
 void setSailAngle (int angle) { 
